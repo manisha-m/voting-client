@@ -8,8 +8,8 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
     "test:watch": "npm run test --  --watch",
     "dev": "webpack-dev-server --progress --colors",
-    "production": "webpack -p",
-    "postinstall": "webpack -p"
+    "production": "webpack -p --config webpack.production.config.js",
+    "postinstall": "webpack -p --config webpack.production.config.js"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +34,11 @@
     ]
   },
   "dependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "express": "^4.14.0",
     "html-webpack-plugin": "^2.22.0",
     "immutable": "^3.8.1",
     "react": "^15.3.1",
