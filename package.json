@@ -8,8 +8,8 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
     "test:watch": "npm run test --  --watch",
     "dev": "webpack-dev-server --progress --colors",
-	"production": "webpack -p",
-	"postinstall": "webpack -p"
+    "production": "webpack -p",
+    "postinstall": "webpack -p"
   },
   "keywords": [],
   "author": "",
@@ -46,6 +46,7 @@
     "redux-logger": "^2.6.1",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.1.0",
-    "socket.io-client": "^1.4.8"
+    "socket.io-client": "^1.4.8",
+    "webpack": "^1.13.2"
   }
 }
