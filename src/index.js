@@ -18,7 +18,7 @@ import createLogger from 'redux-logger';
 
 const logger = createLogger();
 const isProduction = process.env.NODE_ENV === 'production';
-const protocol =  isProduction ? "https" : location.protocol;
+const protocol =  isProduction ? "https:" : location.protocol;
 const serverName = isProduction ? "mmalla-voting-server.herokuapp.com" : location.hostname;
 
 const url = protocol + '//' + serverName + ':8090';
