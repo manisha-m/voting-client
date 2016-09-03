@@ -17,9 +17,13 @@ import promise from 'redux-promise';
 import createLogger from 'redux-logger';
 
 const logger = createLogger();
+const isProduction = process.env.NODE_ENV === 'production';
+const protocol =  isProduction ? "https" : location.protocol;
+const serverName = isProduction ? "mmalla-voting-server.herokuapp.com" : location.hostname;
 
-console.log(`${location.protocol}//${location.hostname}:8090`);
-const socket = io(`${location.protocol}//${location.hostname}:8090`);
+const url = protocol + '//' + serverName + ':8090';
+console.log(url);
+const socket = io(url);
 socket.on('state', state => 
 	store.dispatch(setState(state))
 );
