@@ -21,7 +21,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const protocol =  isProduction ? "https:" : location.protocol;
 const serverName = isProduction ? "mmalla-voting-server.herokuapp.com" : location.hostname;
 
-const url = protocol + '//' + serverName + ':8090';
+const url = protocol + '//' + serverName + ':8080';
 console.log(url);
 const socket = io(url);
 socket.on('state', state => 
